@@ -1,0 +1,579 @@
+    /* Global styles */
+    body {
+        font-family: 'Montserrat', sans-serif; /* Set the font family for the entire document */
+        margin: 0; /* Remove default margin */
+        background-color: black; /* Set the background color */
+        color: white; /* Set the text color */
+        overflow: hidden; /* Hide overflow content */
+    }
+
+    a {
+        text-decoration: none; /* Remove default hyperlink underline */
+        color: white; /* Set hyperlink text color */
+    }
+
+    /* Main container styles */
+    .main {
+        display: flex; /* Use flexbox for main container */
+        height: 100vh; /* Set the height to 100% of the viewport height */
+        padding: 0.5rem; /* Set padding for the main container */
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+        background-color: black; /* Set sidebar background color */
+        width: 340px; /* Set sidebar width */
+        border-radius: 1rem; /* Apply border radius to sidebar */
+    }
+
+    /* Main content styles */
+    .main-content {
+        background-color: #121212; /* Set main content background color */
+        flex: 1; /* Allow main content to grow and take remaining space */
+        border-radius: 1rem; /* Apply border radius to main content */
+        overflow: auto; /* Enable scrolling for overflowing content */
+        padding: 0 1.5rem 0 1.5rem; /* Set padding for main content */
+        margin-left: 0.5rem; /* Set left margin */
+        
+    }
+
+    /* Music player styles */
+    .music-player {
+        background-color: black; /* Set music player background color */
+        position: fixed; /* Fix the position at the bottom */
+        bottom: 0px; /* Stick to the bottom of the viewport */
+        width: 100%; /* Take up full width */
+        height: 72px; /* Set height of the music player */
+    }
+
+    /* Navigation styles */
+    .nav {
+        background-color: #121212; /* Set navigation background color */
+        border-radius: 1rem; /* Apply border radius to navigation */
+        display: flex; /* Use flexbox for navigation */
+        flex-direction: column; /* Arrange navigation items in a column */
+        justify-content: center; /* Center content vertically */
+        height: 100px; /* Set height of navigation */
+        padding: 0.5rem 0.75rem; /* Set padding for navigation */
+    }
+
+    /* Navigation options styles */
+    .nav-options {
+        line-height: 2.5rem; /* Set line height for navigation options */
+        opacity: 0.7; /* Set initial opacity */
+        padding: 0.5rem 0.75rem; /* Set padding for navigation options */
+    }
+
+    .nav-options:hover {
+        line-height: 2.5rem; /* Set line height on hover */
+        opacity: 1; /* Set full opacity on hover */
+        cursor: pointer; /* Change cursor on hover */
+        transition: all 0.3s ease-in-out; /* Add smooth transition effect */
+    }
+
+    .nav-options i {
+        font-size: 1.25rem; /* Set font size for icons within navigation options */
+    }
+
+    .nav-options a {
+        font-size: 1rem; /* Set font size for text within navigation options */
+        margin-left: 1rem; /* Set left margin */
+    }
+
+    /* Library styles */
+    .library {
+        background-color: #121212; /* Set library background color */
+        border-radius: 1rem; /* Apply border radius to library */
+        height: 100%; /* Set height to 100% */
+        margin-top: 0.5rem; /* Set top margin */
+        padding: 0.5rem 0.75rem; /* Set padding for library */
+    }
+
+    /* Library options styles */
+    .options {
+        display: flex; /* Use flexbox for library options */
+        justify-content: space-between; /* Spread options evenly */
+        align-items: center; /* Center items vertically */
+    }
+
+    .lib-options img {
+        height: 2.5rem; /* Set height for images within library options */
+        width: 2.5rem; /* Set width for images within library options */
+        margin-right: 1rem; /* Set right margin */
+    }
+
+    .lib-options {
+        display: flex; /* Use flexbox for library options */
+        align-items: center; /* Center items vertically */
+        opacity: 0.7; /* Set initial opacity */
+    }
+
+    /* Library icons styles */
+    .icons {
+        margin-right: 1rem; /* Set right margin */
+    }
+
+    .icons i {
+        margin-left: 1.5rem; /* Set left margin */
+        opacity: 0.7; /* Set initial opacity */
+        font-size: 1.5rem; /* Set font size for icons within library options */
+    }
+
+    .icons i:hover {
+        opacity: 1; /* Set full opacity on hover */
+        transition: all 0.3s ease-in-out; /* Add smooth transition effect */
+    }
+
+    .lib-options:hover {
+        opacity: 1; /* Set full opacity on hover */
+        transition: all 0.3s ease-in-out; /* Add smooth transition effect */
+    }
+
+    /* Library box styles */
+    .lib-box {
+        display: flex; /* Use flexbox for library box */
+        flex-direction: column; /* Arrange library box items in a column */
+        overflow-y: auto; /* Enable vertical scrolling for overflowing content */
+        max-height: 55%; /* Set maximum height to enable scrolling */
+    }
+
+    /* Styles for the scrollbar */
+    .lib-box::-webkit-scrollbar {
+        width: 10px; /* Set the width of the scrollbar */
+    }
+
+    .lib-box::-webkit-scrollbar-thumb {
+        background-color: #232323; /* Set the color of the scrollbar thumb */
+        border-radius: 5px; /* Set the border radius of the scrollbar thumb */
+    }
+
+    .lib-box::-webkit-scrollbar-track {
+        background-color: #333; /* Set the color of the scrollbar track */
+    }
+
+    /* Individual box styles */
+    .box {
+        height: 10rem; /* Set height of individual box */
+        background-color: #232323; /* Set background color of individual box */
+        border-radius: 0.75rem; /* Apply border radius to individual box */
+        margin: 1rem 0; /* Set margin for individual box */
+        padding: 0.75rem 1rem; /* Set padding for individual box */
+        margin-bottom: 0.5rem; /* Set bottom margin */
+        width: 85%; /* Set width of individual box */
+    }
+
+    .boxp1 {
+        font-size: 1rem; /* Set font size for primary text in individual box */
+        font-weight: 700; /* Set font weight for primary text in individual box */
+    }
+
+    .boxp2 {
+        font-size: 0.875rem; /* Set font size for secondary text in individual box */
+        opacity: 0.9; /* Set opacity for secondary text in individual box */
+    }
+
+    /* Badge button styles */
+    .badge {
+        background-color: white; /* Set background color for badge button */
+        color: black; /* Set text color for badge button */
+        border: none; /* Remove button border */
+        height: 2rem; /* Set height for badge button */
+        width: fit-content; /* Set width to fit content */
+        border-radius: 100px; /* Apply border radius to badge button */
+        padding: 0.25rem 1rem; /* Set padding for badge button */
+        font-weight: 700; /* Set font weight for badge button text */
+        margin-top: 0.5rem; /* Set top margin */
+    }
+
+    /* now we will start making the sticky navbar */
+
+    .sticky-nav {
+        position: sticky; /* Set position property to sticky */
+        top: 0; /* Stick to the top of the viewport */
+        height: 4rem; /* Set height of sticky navbar */
+        background-color: #121212; /* Set background color for sticky navbar */
+        display: flex; /* Use flexbox for sticky navbar */
+        justify-content: space-between; /* Spread items evenly */
+        align-items: center; /* Center items vertically */
+        z-index: 1000; /* Set z-index to ensure it appears above other elements */
+        /* padding: rem; */
+    }
+
+    .sticky-nav-arrows i{
+        font-size: 1.5rem;   
+        margin-left: 0.5rem;
+    }
+
+    .sticky-nav-buttons{
+        display: flex; /* Use flexbox for sticky navbar buttons */
+        justify-content: center; /* Center buttons horizontally */
+        align-items: center; /* Center buttons vertically */
+    }
+
+    .sticky-nav-buttons>button{
+        margin-left: 2rem; /* Set left margin for buttons */
+    }
+
+    .sticky-nav-buttons>i{
+        margin-left: 1rem; /* Set left margin for icons within buttons */
+        margin-right: 0.5rem; /* Set right margin for icons within buttons */
+    }
+
+    .badge-install{
+        background-color: black; /* Set background color for install badge */
+        color: white; /* Set text color for install badge */
+        border: none; /* Remove button border */
+        height: 2rem; /* Set height for install badge */
+        width: fit-content; /* Set width to fit content */
+        border-radius: 100px; /* Apply border radius to install badge */
+        padding: 0.25rem 1rem; /* Set padding for install badge */
+        font-weight: 700; /* Set font weight for install badge text */
+        margin-top: 0.5rem; /* Set top margin */
+    }
+
+    .badge-install>i{
+        margin-right: 0.5rem; /* Set right margin for icon within install badge */
+    }
+
+    .badge-explore:hover{
+        scale: 1.05; /* Scale effect on explore badge hover */
+    }
+
+    .badge-install:hover{
+        scale: 1.05; /* Scale effect on install badge hover */
+    }
+
+    .sticky-nav-buttons i:hover{
+        scale: 1.2; /* Scale effect on icon hover within sticky navbar buttons */
+    }
+
+    .bell{
+        font-weight: 500; /* Set font weight for bell icon */
+    }
+
+    .user{
+        font-weight: 700; /* Set font weight for user icon */
+    }
+
+    @media (max-width: 64rem) {
+        .hide{
+            display: none; /* Hide element with the class 'hide' on smaller screens */
+        }
+    }
+
+    /* now we start adding the cards */
+
+    .card{
+        background-color: #232323; /* Set background color for cards */
+        width: 10rem; /* Set width for cards */
+        border-radius: 1rem; /* Apply border radius to cards */
+        padding: 1rem; /* Set padding for cards */
+        
+    }
+
+    .card-img{
+        width: 100%; /* Set width for card images */
+        border-radius: 1rem; /* Apply border radius to card images */
+    
+    }
+
+    .cards-container{
+        display: flex; /* Use flexbox for cards container */
+        justify-content: space-between; /* Spread cards evenly within the container */
+        
+    }
+
+    .card-title{
+        font-weight: 900; /* Set font weight for card titles */
+    }
+
+    .card-info{
+        font-size: 0.875rem; /* Set font size for card information */
+        opacity: 0.75; /* Set opacity for card information */
+    
+    }
+
+    .heading{
+        display: flex; /* Use flexbox for heading */
+        justify-content: space-between; /* Spread items evenly within the heading */
+        align-items: center; /* Center items vertically within the heading */
+    }
+
+    .row-heading{
+        opacity: 0.7; /* Set opacity for span elements */
+        font-size: 0.875rem; /* Set font size for span elements */
+        font-weight: 700; /* Set font weight for span elements */
+    }
+
+    .row-heading:hover{
+        text-decoration: underline; /* Underline text on hover for span elements */
+    }
+
+    .heading{
+        padding-top: 3rem; /* Set top padding for heading */
+        padding-bottom: 1.5rem; /* Set bottom padding for heading */
+    }
+
+    h2:hover{
+        text-decoration: underline; /* Underline text on hover for h2 elements */
+    }
+
+
+    .footer{
+        height: 13.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .line{
+        width: 90%;
+        height: 5%;
+        border-top: 1px solid white;
+        opacity: 0.4;
+    }
+
+    .footer-main{
+        display: flex;
+        align-items: top;
+        justify-content: space-around;
+    } 
+
+    .footer-options{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .bold{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .column2{
+        margin-left: 5rem;
+    }
+
+    .sm-icons{
+        margin-left: auto;
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+
+    .sm-icons i{
+        margin-left: 0.5rem;
+    }
+
+    .sm-icons i:hover{
+        scale: 1.2;
+    }
+
+    .footer-options p:hover{
+        text-decoration: underline;
+    }
+
+    .line-bottom{
+        width: 100%;
+        border-top: 1px solid white;
+        height: 5%;
+        opacity: 0.5;
+    }
+
+    .lh-side{
+        margin-bottom: 2rem;
+    }
+
+    .bottom-footer{
+        color:grey;
+        opacity: 0.7;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .bottom-footer span{
+        margin-right: 1rem;
+    }
+
+    .music-player{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     
+    }
+
+    .album{
+        width: 25%;
+        z-index: 10000;
+        height: 4.5rem;
+    }
+
+    .player{
+        width: 50%;
+        background-color: black;
+        height: 4.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .controls{
+        width: 25%;
+        height: 4.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .player-controls{
+        width: 55%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        opacity: 0.7;
+    }
+
+
+    .player-controls i {
+        height: 0.5rem;
+        opacity: 0.7; 
+        margin-bottom: 0.5rem;   
+    }
+
+    .player-controls i:hover{
+        scale: 1.2;
+        opacity: 1;
+    }
+
+    .playback-bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 80%;
+    }
+
+    .progress-bar{
+        width: 100%;
+        appearance: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .progress-bar::-webkit-slider-runnable-track{
+        background-color: #ddd;
+        border-radius: 100px;
+        height: 0.2rem;
+    }
+
+    .progress-bar::-webkit-slider-thumb{
+        appearance: none;
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+        background-color: #1bd760;
+        margin-top: -0.375rem;
+    }
+
+    .album{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .album-image{
+        height: 3rem;
+        width: 3rem;
+        margin-right: 0.5rem;
+    }
+
+    .song-name{
+        font-weight: 700;
+        margin-bottom: 0.1rem;
+        color: white;
+    }
+
+    .singers{
+        margin-top: 0rem;
+        opacity: 0.7;
+    }
+
+    .album i{
+        margin-left: 1rem;
+        color: grey;
+    }
+
+    .album i:hover{
+        color: white;
+        scale: 1.2;
+    }
+
+    .song-details p:hover{
+        text-decoration: underline;
+    }
+
+    .controls .slider2 {
+        width: 25%;
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    
+    .controls .slider2::-webkit-slider-runnable-track {
+        background-color: #ddd;
+        border-radius: 100px;
+        height: 0.2rem;
+    }
+    
+    .controls .slider2::-webkit-slider-thumb {
+     
+        appearance: none;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: #1bd760;
+        cursor: pointer;
+        margin-top: -0.375rem;
+    }
+
+    /* Responsive styles for cards on smaller screens */
+/* Existing styles */
+
+/* Add the following media query */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Stack main container elements vertically on smaller screens */
+
+    }
+
+    .sidebar {
+        display: none; /* Hide the sidebar on smaller screens */
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove the left margin on main content */
+        border-radius: 1rem; /* Adjust border-radius for main content */
+    }
+
+    .music-player{
+        height: 10rem;
+    }
+
+    .controls{
+        display: none;
+    }
+
+    .album{
+        margin-left: 3rem;
+    }
+}
+
+    
+    
